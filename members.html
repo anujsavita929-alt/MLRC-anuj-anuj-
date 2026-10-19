@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office Bearers & Leadership — MLRC</title>
+  <meta name="description" content="Meet the faculty mentor, executive committee office bearers, and research divisions of the Machine Learning Research Club (MLRC)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+<body data-page="members">
+
+  <div class="left-rail">EST · 2026 — MACHINE LEARNING RESEARCH CLUB · UNIVERSITY CHAPTER</div>
+  <div class="left-rail-socials">
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="GitHub">GH</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="LinkedIn">IN</a>
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="Discord">DC</a>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-left">
+        <div class="brand-icon-box">ML</div>
+        <div class="brand-divider"></div>
+        <div class="brand-title-wrap">
+          <span class="brand-main-title">MLRC</span>
+          <span class="brand-sub-tag">Research Chapter</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="tubelight-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="members.html" class="nav-link active">Members</a></li>
+          <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls-right">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">☀️</button>
+        <a href="join.html" class="btn btn-gold btn-sm">Apply Now</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="research.html" class="nav-link">Research & Papers</a></li>
+      <li><a href="projects.html" class="nav-link">Projects & Systems</a></li>
+      <li><a href="events.html" class="nav-link">Events & Calendar</a></li>
+      <li><a href="members.html" class="nav-link active">People & Alumni</a></li>
+      <li><a href="join.html" class="nav-link">Recruitment & Join</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Leadership Hero Banner (IEEE CS MITS Signature) -->
+    <section class="leadership-header">
+      <div class="container">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>THE TEAM</span>
+        </div>
+        
+        <h1 class="leadership-main-title">Our Team & <span class="gold-italic">Leadership.</span></h1>
+        <p class="leadership-sub">
+          The students elected to steer the chapter this tenure — and the divisions that make every event and paper happen.
+        </p>
+
+        <!-- Tenure Bar -->
+        <div class="tenure-bar">
+          <div class="tenure-left">
+            <span class="tenure-badge-gold">Tenure 2026 – 2027</span>
+            <span class="tenure-affiliation">Machine Learning Research Club · University Chapter</span>
+          </div>
+          <div class="tenure-switcher">
+            <span class="tenure-pill active">● 2026–2027 · Current</span>
+            <span class="tenure-pill">2025–2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty Mentor Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <h2 class="serif-title" style="font-size: 2.3rem;">Faculty mentor</h2>
+        </div>
+
+        <div id="faculty-mentor-container">
+          <div style="text-align: center; color: var(--text-muted);">Loading faculty mentor...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Office Bearers Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 3rem;">
+          <div class="section-kicker">
+            <span class="kicker-dot"></span>
+            <span>EXECUTIVE COMMITTEE</span>
+          </div>
+          <h2 class="serif-title" style="font-size: 2.3rem;">Core office bearers</h2>
+        </div>
+
+        <!-- Featured Chair / President Card -->
+        <div id="chair-featured-container"></div>
+
+        <!-- 4-Column Core Officers Grid -->
+        <div class="core-officers-grid" id="core-officers-grid">
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted);">Loading core officers...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialised Teams / Our Divisions Section -->
+    <section class="section" style="background: var(--surface-hover);" id="divisions">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <div class="section-kicker">
+            <span class="kicker-dot"></span>
+            <span>SPECIALISED TEAMS</span>
+          </div>
+          <h2 class="serif-title" style="font-size: 2.3rem;">Our divisions</h2>
+        </div>
+
+        <!-- Division Filter Bar -->
+        <div class="filter-container" style="justify-content: center; margin-bottom: 3rem;">
+          <div class="filter-buttons">
+            <button class="filter-btn div-filter-btn active" data-div="all">All Divisions</button>
+            <button class="filter-btn div-filter-btn" data-div="foundation-models">Foundation Models</button>
+            <button class="filter-btn div-filter-btn" data-div="vision-robotics">Vision & Robotics</button>
+            <button class="filter-btn div-filter-btn" data-div="bioai-science">BioAI & Science</button>
+            <button class="filter-btn div-filter-btn" data-div="systems-cluster">Systems & GPU Ops</button>
+          </div>
+        </div>
+
+        <!-- Divisions List Container -->
+        <div id="divisions-container">
+          <div style="text-align: center; color: var(--text-muted);">Loading divisions...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alumni Placements Wall -->
+    <section class="section" id="alumni">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">
+            <span class="kicker-dot"></span>
+            <span>WHERE WE GO</span>
+          </div>
+          <h2 class="serif-title" style="font-size: 2.3rem;">Alumni Placement Wall</h2>
+          <p class="section-description">
+            Where our former office bearers and authors now research at leading PhD programs and frontier AI labs.
+          </p>
+        </div>
+
+        <div class="grid-4" id="members-alumni-grid">
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted);">Loading alumni wall...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-mark">
+        <span class="footer-mark-text">MACHINE LEARNING RESEARCH CLUB</span>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Machine Learning Research Club (MLRC). All rights reserved.</div>
+        <div>Chapter #STB-MLRC-2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

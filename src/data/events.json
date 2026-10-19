@@ -1,0 +1,226 @@
+[
+  {
+    "id": "evt-1",
+    "title": "Scaling Laws, Reasoning Chains & Frontier Models: From Theory to Practice",
+    "date": "2026-10-24T18:00:00",
+    "displayDate": "Oct 24, 2026",
+    "day": "24",
+    "monthYear": "OCT '26",
+    "time": "6:00 PM – 7:30 PM EST",
+    "location": "Gates Auditorium (Room 104) & Hybrid Stream",
+    "type": "Seminar",
+    "status": "upcoming",
+    "featured": true,
+    "bannerGradient": "linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)",
+    "bannerLabel": "KEYNOTE SEMINAR",
+    "speaker": {
+      "name": "Dr. Sarah Lin",
+      "affiliation": "Senior Research Scientist, Google DeepMind",
+      "role": "Keynote Speaker"
+    },
+    "summary": "Dr. Lin explores empirical mechanics behind test-time compute scaling, tree-search reasoning in multimodal models, and what current scaling curves imply for frontier systems.",
+    "rsvpUrl": "https://forms.gle/mlrc-seminar-frontier",
+    "tags": ["Reasoning", "Scaling Laws", "DeepMind", "LLMs"],
+    "materials": {
+      "slidesUrl": "#",
+      "notebookUrl": "",
+      "videoUrl": ""
+    }
+  },
+  {
+    "id": "evt-2",
+    "title": "Bootcamp: Implementing FlashAttention & Custom GPU Kernels in Triton",
+    "date": "2026-11-02T16:00:00",
+    "displayDate": "Nov 02, 2026",
+    "day": "02",
+    "monthYear": "NOV '26",
+    "time": "4:00 PM – 6:30 PM EST",
+    "location": "Turing Computer Lab 3B",
+    "type": "Workshop",
+    "status": "upcoming",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #1e293b 0%, #0f766e 50%, #0d9488 100%)",
+    "bannerLabel": "GPU SYSTEMS LAB",
+    "speaker": {
+      "name": "Alex Chen",
+      "affiliation": "MLRC President & Systems Researcher",
+      "role": "Workshop Lead"
+    },
+    "summary": "An intensive hands-on lab on GPU memory hierarchies (SRAM, HBM), memory-bound operators, and writing high-throughput kernels in OpenAI Triton from scratch.",
+    "rsvpUrl": "https://forms.gle/mlrc-triton-bootcamp",
+    "tags": ["Triton", "FlashAttention", "GPU Kernels", "PyTorch"],
+    "materials": {
+      "slidesUrl": "#",
+      "notebookUrl": "https://colab.research.google.com/mlrc/triton-flashattention",
+      "videoUrl": ""
+    }
+  },
+  {
+    "id": "evt-3",
+    "title": "Reading Group: 'Mamba-3 & State-Space Models vs Transformers'",
+    "date": "2026-11-08T17:30:00",
+    "displayDate": "Nov 08, 2026",
+    "day": "08",
+    "monthYear": "NOV '26",
+    "time": "5:30 PM – 7:00 PM EST",
+    "location": "MLRC Collaboration Lounge (Room 210)",
+    "type": "Reading Group",
+    "status": "upcoming",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #2e1065 0%, #581c87 50%, #7e22ce 100%)",
+    "bannerLabel": "LATENT SPACE RG",
+    "speaker": {
+      "name": "Sofia Ramirez",
+      "affiliation": "Head of Research, MLRC",
+      "role": "Discussion Facilitator"
+    },
+    "summary": "A deep dissection of recent literature on continuous-time state-space models (SSMs), linear recurrent units, and hybrid transformer-Mamba architectures for million-token sequences.",
+    "rsvpUrl": "https://forms.gle/mlrc-reading-mamba",
+    "tags": ["State-Space Models", "Mamba", "Long Context", "Theory"],
+    "materials": {
+      "slidesUrl": "#",
+      "notebookUrl": "",
+      "videoUrl": ""
+    }
+  },
+  {
+    "id": "evt-4",
+    "title": "Campus Datathon 2026: AI for Climate & Environmental Informatics",
+    "date": "2026-11-14T09:00:00",
+    "displayDate": "Nov 14–15, 2026",
+    "day": "14",
+    "monthYear": "NOV '26",
+    "time": "36-Hour Hackathon",
+    "location": "University Innovation Hub & Discord",
+    "type": "Hackathon",
+    "status": "upcoming",
+    "featured": true,
+    "bannerGradient": "linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%)",
+    "bannerLabel": "NATIONAL HACKATHON",
+    "speaker": {
+      "name": "MLRC & Earth Systems Lab",
+      "affiliation": "Co-hosted with IEEE Student Branch",
+      "role": "Organizing Committee"
+    },
+    "summary": "$5,000 prize pool! Build ML models analyzing satellite multispectral imagery, wildfire spread forecasting, and urban thermal heat islands with provided GPU cluster allocations.",
+    "rsvpUrl": "https://datathon.mlrc-lab.org",
+    "tags": ["Hackathon", "Climate AI", "Remote Sensing", "$5,000 Prize"],
+    "materials": {
+      "slidesUrl": "#",
+      "notebookUrl": "https://github.com/mlrc/climate-datathon-starter",
+      "videoUrl": ""
+    }
+  },
+  {
+    "id": "evt-7",
+    "title": "Workshop: Fine-Tuning Open Source LLMs with Unsloth & LoRA",
+    "date": "2026-11-20T17:00:00",
+    "displayDate": "Nov 20, 2026",
+    "day": "20",
+    "monthYear": "NOV '26",
+    "time": "5:00 PM – 7:00 PM EST",
+    "location": "Turing Computer Lab 3A",
+    "type": "Workshop",
+    "status": "upcoming",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #451a03 0%, #b45309 50%, #d97706 100%)",
+    "bannerLabel": "HANDS-ON WORKSHOP",
+    "speaker": {
+      "name": "Rohan Patel",
+      "affiliation": "Head of Compute & Engineering, MLRC",
+      "role": "Instructor"
+    },
+    "summary": "Step-by-step guide to parameter-efficient fine-tuning (PEFT) on consumer GPUs. Quantized LoRA, gradient checkpointing, and deploying fine-tuned weights with vLLM.",
+    "rsvpUrl": "https://forms.gle/mlrc-unsloth-lora",
+    "tags": ["Fine-Tuning", "LoRA", "Unsloth", "vLLM"],
+    "materials": {
+      "slidesUrl": "#",
+      "notebookUrl": "https://colab.research.google.com/mlrc/unsloth-peft-lab",
+      "videoUrl": ""
+    }
+  },
+  {
+    "id": "evt-5",
+    "title": "Workshop: Diffusion Models from Math to PyTorch",
+    "date": "2026-09-18T17:00:00",
+    "displayDate": "Sep 18, 2026",
+    "day": "18",
+    "monthYear": "SEP '26",
+    "time": "5:00 PM – 7:00 PM EST",
+    "location": "Room 102 (Old Science Hall)",
+    "type": "Workshop",
+    "status": "past",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #1e1e2f 0%, #2d2b55 50%, #3e3b70 100%)",
+    "bannerLabel": "COMPLETED LAB",
+    "speaker": {
+      "name": "Marcus Brody",
+      "affiliation": "MLRC Projects Lead",
+      "role": "Instructor"
+    },
+    "summary": "Derived DDPM score-matching mathematics and implemented continuous-time noise prediction, classifier-free guidance, and DDIM sampling in 200 lines of clean PyTorch.",
+    "rsvpUrl": "",
+    "tags": ["Diffusion", "Score-Matching", "Generative AI", "PyTorch"],
+    "materials": {
+      "slidesUrl": "https://mlrc.org/slides/diffusion-math.pdf",
+      "notebookUrl": "https://colab.research.google.com/mlrc/diffusion-scratch",
+      "videoUrl": "https://youtube.com/watch?v=sample-mlrc-diff"
+    }
+  },
+  {
+    "id": "evt-6",
+    "title": "Guest Seminar: Robust Reinforcement Learning under Sim2Real Shift",
+    "date": "2026-09-04T18:00:00",
+    "displayDate": "Sep 04, 2026",
+    "day": "04",
+    "monthYear": "SEP '26",
+    "time": "6:00 PM – 7:15 PM EST",
+    "location": "Virtual Seminar & Zoom",
+    "type": "Seminar",
+    "status": "past",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #18181b 0%, #27272a 50%, #3f3f46 100%)",
+    "bannerLabel": "ARCHIVED SEMINAR",
+    "speaker": {
+      "name": "Dr. Kenji Tanaka",
+      "affiliation": "Robotics Researcher, UC Berkeley",
+      "role": "Guest Speaker"
+    },
+    "summary": "Explored domain randomization, adversarial environmental perturbations, and invariant representation learning for quadrupeds navigating unstructured outdoor terrains.",
+    "rsvpUrl": "",
+    "tags": ["Robotics", "Sim2Real", "Reinforcement Learning", "Control"],
+    "materials": {
+      "slidesUrl": "https://mlrc.org/slides/sim2real-tanaka.pdf",
+      "notebookUrl": "",
+      "videoUrl": "https://youtube.com/watch?v=sample-mlrc-sim2real"
+    }
+  },
+  {
+    "id": "evt-8",
+    "title": "Reading Group: 'DeepSeek-V3 & Multi-Head Latent Attention'",
+    "date": "2026-08-25T17:30:00",
+    "displayDate": "Aug 25, 2026",
+    "day": "25",
+    "monthYear": "AUG '26",
+    "time": "5:30 PM – 7:00 PM EST",
+    "location": "MLRC Collaboration Lounge (Room 210)",
+    "type": "Reading Group",
+    "status": "past",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #172554 0%, #1e3a8a 50%, #1e40af 100%)",
+    "bannerLabel": "READING ARCHIVE",
+    "speaker": {
+      "name": "Priya Sharma",
+      "affiliation": "Head of Events, MLRC",
+      "role": "Discussion Lead"
+    },
+    "summary": "Comprehensive architectural walkthrough of Multi-Head Latent Attention (MLA), DeepSeekMoE auxiliary-loss-free load balancing, and multi-token prediction objectives.",
+    "rsvpUrl": "",
+    "tags": ["MLA", "DeepSeek", "MoE Architecture", "Paper Reading"],
+    "materials": {
+      "slidesUrl": "https://mlrc.org/slides/mla-deepseek.pdf",
+      "notebookUrl": "",
+      "videoUrl": "https://youtube.com/watch?v=sample-mlrc-mla"
+    }
+  }
+]

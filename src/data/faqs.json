@@ -1,0 +1,26 @@
+[
+  {
+    "q": "Do I need previous machine learning research experience to apply?",
+    "a": "No prior publication record is required. We evaluate applicants on mathematical curiosity, programming tenacity (particularly Python/PyTorch), and eagerness to read original research papers. We offer beginner reading groups and mentorship to onboard passionate new members."
+  },
+  {
+    "q": "Can first-year undergraduate students join?",
+    "a": "Yes! We welcome freshmen and sophomores. In fact, many of our track leads and published authors joined during their first year. If you have foundational calculus, linear algebra, and Python, we will help you bridge into deep learning."
+  },
+  {
+    "q": "What is the expected weekly time commitment?",
+    "a": "Active members typically commit 6 to 10 hours per week, which includes attending the weekly paper reading group, hands-on lab sprints, and working on an assigned research track or open-source project."
+  },
+  {
+    "q": "What compute and GPU resources are provided?",
+    "a": "Through our department affiliation and cloud research grants, active project teams receive managed access to an on-campus cluster equipped with Nvidia A100 / H100 nodes, Slurm job queueing, and Weights & Biases experiment tracking."
+  },
+  {
+    "q": "What are the differences between the Research Track and Engineering Track?",
+    "a": "The Research Track focuses on novel model architectures, loss formulations, mathematical proofs, and paper writing targeted at top-tier venues (NeurIPS, ICML, CVPR). The Engineering Track focuses on scalable infrastructure, Triton kernels, distributed training, deployment, and open-source developer tooling."
+  },
+  {
+    "q": "Are students outside of Computer Science eligible?",
+    "a": "Yes! We actively seek students from Mathematics, Physics, Electrical Engineering, Neuroscience, Biology, and Cognitive Science. Interdisciplinary cross-pollination is where our most impactful projects originate."
+  }
+]

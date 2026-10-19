@@ -1,0 +1,134 @@
+{
+  "tenure": "2026 – 2027",
+  "facultyMentor": {
+    "name": "Dr. Elena Vance, Ph.D.",
+    "role": "FACULTY MENTOR",
+    "title": "Associate Professor & AI Lab Director",
+    "department": "Department of Computer Science & Engineering",
+    "email": "elena.vance@university.edu",
+    "avatarText": "EV",
+    "profileUrl": "https://university.edu/faculty/elena-vance",
+    "scholar": "https://scholar.google.com",
+    "linkedin": "https://linkedin.com"
+  },
+  "president": {
+    "name": "Alex Chen",
+    "badge": "★ President & Lab Co-Director",
+    "designation": "FOUNDING CHAIR & LAB CO-DIRECTOR",
+    "major": "Computer Science & Applied Mathematics '27",
+    "bio": "Leading the chapter this tenure — setting research direction, representing MLRC at top-tier conferences (NeurIPS '26 Spotlight), managing GPU cluster allocations, and keeping every squad moving.",
+    "avatarText": "AC",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com",
+    "scholar": "https://scholar.google.com"
+  },
+  "coreOfficers": [
+    {
+      "name": "Sofia Ramirez",
+      "designation": "VICE CHAIRPERSON",
+      "subRole": "Head of Research & Alignment",
+      "major": "CS & Cognitive Science '27",
+      "avatarText": "SR",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    },
+    {
+      "name": "Rohan Patel",
+      "designation": "HEAD OF COMPUTE",
+      "subRole": "Systems & Slurm Operations",
+      "major": "Electrical Engineering & CS '27",
+      "avatarText": "RP",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    },
+    {
+      "name": "Priya Sharma",
+      "designation": "HEAD OF EVENTS",
+      "subRole": "Education & Datathons",
+      "major": "Bioengineering & Data Science '28",
+      "avatarText": "PS",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    },
+    {
+      "name": "Marcus Brody",
+      "designation": "TECH LEAD & WEBMASTER",
+      "subRole": "Open Source & Infrastructure",
+      "major": "Software Engineering '28",
+      "avatarText": "MB",
+      "linkedin": "https://linkedin.com",
+      "github": "https://github.com"
+    }
+  ],
+  "divisions": [
+    {
+      "id": "foundation-models",
+      "name": "Foundation Models & LLMs",
+      "members": [
+        { "name": "Aditya Singh", "major": "AI & Data Science '28", "avatarText": "AS", "github": "https://github.com" },
+        { "name": "Kenji Sato", "major": "Computer Science '27", "avatarText": "KS", "github": "https://github.com" },
+        { "name": "Astha Jain", "major": "CSE '28", "avatarText": "AJ", "github": "https://github.com" },
+        { "name": "Anmol Soni", "major": "Mathematics & CS '28", "avatarText": "AS", "github": "https://github.com" }
+      ]
+    },
+    {
+      "id": "vision-robotics",
+      "name": "Computer Vision & Robotics",
+      "members": [
+        { "name": "Bhavya Tiwari", "major": "Robotics Engineering '28", "avatarText": "BT", "github": "https://github.com" },
+        { "name": "Amit Manmode", "major": "CSE '27", "avatarText": "AM", "github": "https://github.com" },
+        { "name": "Khushboo Chourasiya", "major": "AI & Robotics '28", "avatarText": "KC", "github": "https://github.com" },
+        { "name": "Radhika Nayak", "major": "IT & Machine Vision '28", "avatarText": "RN", "github": "https://github.com" }
+      ]
+    },
+    {
+      "id": "bioai-science",
+      "name": "BioAI & Computational Science",
+      "members": [
+        { "name": "Liam O'Connor", "major": "Neuroscience & CS '27", "avatarText": "LO", "github": "https://github.com" },
+        { "name": "Animesh Singh", "major": "Bioinformatics '28", "avatarText": "AS", "github": "https://github.com" },
+        { "name": "Priyanshi Saxena", "major": "Biomedical Engineering '28", "avatarText": "PS", "github": "https://github.com" }
+      ]
+    },
+    {
+      "id": "systems-cluster",
+      "name": "Distributed Systems & GPU Operations",
+      "members": [
+        { "name": "Shivansh Soni", "major": "Computer Science '27", "avatarText": "SS", "github": "https://github.com" },
+        { "name": "Yash Panse", "major": "CSE '28", "avatarText": "YP", "github": "https://github.com" },
+        { "name": "Unnati Sharma", "major": "Information Technology '28", "avatarText": "US", "github": "https://github.com" },
+        { "name": "Shivam Sharma", "major": "Electrical & Systems '28", "avatarText": "SS", "github": "https://github.com" }
+      ]
+    }
+  ],
+  "alumni": [
+    {
+      "name": "David Zhou",
+      "classYear": "Class of '24",
+      "pastRole": "Former MLRC President",
+      "currentPosition": "Ph.D. Student in Computer Science",
+      "destination": "Stanford University (SAIL)"
+    },
+    {
+      "name": "Elena Rostova",
+      "classYear": "Class of '24",
+      "pastRole": "Research Lead (NLP)",
+      "currentPosition": "Research Engineer, Post-Training",
+      "destination": "Google DeepMind"
+    },
+    {
+      "name": "Amina Touré",
+      "classYear": "Class of '25",
+      "pastRole": "Vision Research Lead",
+      "currentPosition": "Ph.D. Candidate in Robotics",
+      "destination": "Carnegie Mellon University (CMU)"
+    },
+    {
+      "name": "Jordan Bell",
+      "classYear": "Class of '25",
+      "pastRole": "Head of Engineering",
+      "currentPosition": "AI Resident",
+      "destination": "Meta FAIR"
+    }
+  ]
+}

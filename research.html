@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research & Publications — MLRC</title>
+  <meta name="description" content="Explore peer-reviewed publications, preprints, and research tracks from the Machine Learning Research Club (MLRC)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+<body data-page="research">
+
+  <div class="left-rail">EST · 2026 — MACHINE LEARNING RESEARCH CLUB · UNIVERSITY CHAPTER</div>
+  <div class="left-rail-socials">
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="GitHub">GH</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="LinkedIn">IN</a>
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="Discord">DC</a>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-left">
+        <div class="brand-icon-box">ML</div>
+        <div class="brand-divider"></div>
+        <div class="brand-title-wrap">
+          <span class="brand-main-title">MLRC</span>
+          <span class="brand-sub-tag">Research Chapter</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="tubelight-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="research.html" class="nav-link active">Research</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="members.html" class="nav-link">Members</a></li>
+          <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls-right">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">☀️</button>
+        <a href="join.html" class="btn btn-gold btn-sm">Apply Now</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="research.html" class="nav-link active">Research & Papers</a></li>
+      <li><a href="projects.html" class="nav-link">Projects & Systems</a></li>
+      <li><a href="events.html" class="nav-link">Events & Calendar</a></li>
+      <li><a href="members.html" class="nav-link">People & Alumni</a></li>
+      <li><a href="join.html" class="nav-link">Recruitment & Join</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="section-sm" style="padding-top: 8rem; border-bottom: 1px solid var(--surface-border); text-align: center;">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>ACADEMIC PAPERS & PREPRINTS</span>
+        </div>
+        <h1 style="margin-bottom: 1rem;">
+          Research Output & <span class="gold-italic">Publications.</span>
+        </h1>
+        <p class="section-description">
+          Peer-reviewed work by student members published at NeurIPS, ICML, ICLR, CVPR, and IEEE venues.
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications Filter & Search -->
+    <section class="section">
+      <div class="container">
+        <div class="filter-container">
+          <div class="filter-buttons">
+            <button class="filter-btn track-filter-btn active" data-track="all">All Tracks</button>
+            <button class="filter-btn track-filter-btn" data-track="LLMs">LLMs & Attention</button>
+            <button class="filter-btn track-filter-btn" data-track="Vision">Vision & Multimodal</button>
+            <button class="filter-btn track-filter-btn" data-track="BioAI">BioAI & Folding</button>
+            <button class="filter-btn track-filter-btn" data-track="Safety">Safety & Alignment</button>
+            <button class="filter-btn track-filter-btn" data-track="Theory">Theory & Bounds</button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="papers-search" class="search-input" placeholder="Search papers, authors, venues..." aria-label="Search papers" />
+          </div>
+        </div>
+
+        <div class="papers-container" id="papers-list">
+          <div style="text-align: center; padding: 3rem; color: var(--text-muted);">Loading publications...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reading Group Spotlight -->
+    <section class="section" id="reading-group" style="background: var(--surface-hover);">
+      <div class="container">
+        <div class="card-ieee card-gold-glow" style="padding: 3rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div>
+              <div class="section-kicker">
+                <span class="kicker-dot"></span>
+                <span>WEEKLY JOURNAL CLUB</span>
+              </div>
+              <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">The Latent Space Reading Group</h2>
+              <p style="color: var(--text-secondary); max-width: 680px;">
+                Every Thursday at 6:00 PM, student researchers present fresh breakthroughs from arXiv, dissecting mathematical derivations and testing code implementations.
+              </p>
+            </div>
+            <a href="events.html" class="btn btn-gold">View Schedule →</a>
+          </div>
+
+          <div class="grid-3" style="margin-top: 2rem;">
+            <div style="background: var(--surface-card); border: 1px solid var(--surface-border); padding: 1.25rem; border-radius: var(--radius-md);">
+              <div style="font-size: 0.75rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.35rem;">NEXT DISCUSSION</div>
+              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Mamba-3 & Linear Attention</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Led by Sofia Ramirez • Oct 24, 6 PM</div>
+            </div>
+
+            <div style="background: var(--surface-card); border: 1px solid var(--surface-border); padding: 1.25rem; border-radius: var(--radius-md);">
+              <div style="font-size: 0.75rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.35rem;">VENUE & FORMAT</div>
+              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">Turing Hall 210 & Zoom</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Hybrid • Open to all campus students</div>
+            </div>
+
+            <div style="background: var(--surface-card); border: 1px solid var(--surface-border); padding: 1.25rem; border-radius: var(--radius-md);">
+              <div style="font-size: 0.75rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.35rem;">SLIDE REPOSITORY</div>
+              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">50+ Archive Presentations</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Annotated notes on our Notion & GitHub</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Giant Typographic Watermark Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-mark">
+        <span class="footer-mark-text">MACHINE LEARNING RESEARCH CLUB</span>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Machine Learning Research Club (MLRC). All rights reserved.</div>
+        <div>Chapter #STB-MLRC-2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

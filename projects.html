@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Open Source — MLRC</title>
+  <meta name="description" content="Explore real-world machine learning systems, tools, and prototypes developed by students at the Machine Learning Research Club (MLRC)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+<body data-page="projects">
+
+  <div class="left-rail">EST · 2026 — MACHINE LEARNING RESEARCH CLUB · UNIVERSITY CHAPTER</div>
+  <div class="left-rail-socials">
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="GitHub">GH</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="LinkedIn">IN</a>
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="Discord">DC</a>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-left">
+        <div class="brand-icon-box">ML</div>
+        <div class="brand-divider"></div>
+        <div class="brand-title-wrap">
+          <span class="brand-main-title">MLRC</span>
+          <span class="brand-sub-tag">Research Chapter</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="tubelight-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="members.html" class="nav-link">Members</a></li>
+          <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls-right">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">☀️</button>
+        <a href="join.html" class="btn btn-gold btn-sm">Apply Now</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="research.html" class="nav-link">Research & Papers</a></li>
+      <li><a href="projects.html" class="nav-link active">Projects & Systems</a></li>
+      <li><a href="events.html" class="nav-link">Events & Calendar</a></li>
+      <li><a href="members.html" class="nav-link">People & Alumni</a></li>
+      <li><a href="join.html" class="nav-link">Recruitment & Join</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Projects Hero Banner (IEEE CS Signature Bebas Neue & What's Happening) -->
+    <section class="projects-header">
+      <div class="container">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>OPEN-SOURCE ARTIFACTS</span>
+        </div>
+        
+        <h1 class="projects-main-title">Projects & <span class="gold-italic">Systems.</span></h1>
+        <p class="projects-sub">
+          Open-source developer frameworks, Triton GPU kernels, benchmark suites, and live neural demonstrations built by MLRC researchers.
+        </p>
+
+        <!-- Search & Filter Bar (IEEE CS Style) -->
+        <div class="projects-filter-bar">
+          <div class="projects-search-wrap">
+            <span class="projects-search-icon">🔍</span>
+            <input 
+              type="text" 
+              class="projects-search-input" 
+              id="projects-search-input" 
+              placeholder="Search projects by title, stack, or contributor..." 
+              autocomplete="off"
+            />
+          </div>
+          <div class="projects-filter-pills" id="projects-filter-pills">
+            <button class="project-filter-pill active" data-category="all">All</button>
+            <button class="project-filter-pill" data-category="Computer Vision">Computer Vision</button>
+            <button class="project-filter-pill" data-category="BioAI & Science">BioAI & Science</button>
+            <button class="project-filter-pill" data-category="AI Safety">AI Safety</button>
+            <button class="project-filter-pill" data-category="Open Source & Tooling">Open Source & Tools</button>
+            <button class="project-filter-pill" data-category="Reinforcement Learning">RL & Control</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects 3-Column Grid -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="projects-grid" id="projects-grid">
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 3rem;">
+            Loading projects repository...
+          </div>
+        </div>
+
+        <!-- Propose a Project Banner (IEEE CS MITS Signature Card) -->
+        <div class="pitch-project-card card-gold-glow">
+          <div class="pitch-content-wrap">
+            <div>
+              <div class="section-kicker" style="margin-bottom: 0.5rem;">
+                <span class="kicker-dot"></span>
+                <span>PROJECT PITCH NIGHT</span>
+              </div>
+              <h3 class="pitch-title">Pitch a New AI System to MLRC</h3>
+              <p class="pitch-desc">
+                Every semester, club members propose research or engineering projects, recruit teams, and get matched with A100 GPU cluster allocations and faculty mentor guidance.
+              </p>
+            </div>
+            <a href="join.html" class="btn btn-gold btn-lg">Join Club to Pitch →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-mark">
+        <span class="footer-mark-text">MACHINE LEARNING RESEARCH CLUB</span>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Machine Learning Research Club (MLRC). All rights reserved.</div>
+        <div>Chapter #STB-MLRC-2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

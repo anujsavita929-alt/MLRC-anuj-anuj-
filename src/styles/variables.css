@@ -1,0 +1,104 @@
+/* MLRC Design Tokens & Variables — Inspired by IEEE CS MITS */
+:root {
+  /* Theme: Dark (Default) */
+  --bg-primary: #0d0d12;
+  --bg-secondary: #08080c;
+  --bg-surface: #14141e;
+  --surface-card: #161622;
+  --surface-hover: #1e1e2d;
+  --surface-border: rgba(255, 255, 255, 0.09);
+  --surface-border-strong: rgba(255, 255, 255, 0.18);
+  --bg-glass: rgba(13, 13, 18, 0.75);
+  --bg-input: rgba(20, 20, 30, 0.85);
+
+  /* Gold / Amber Signature Brand Colors */
+  --gold: #f5c518;
+  --gold-hover: #e0b00e;
+  --gold-dark: #d4a017;
+  --gold-light: rgba(245, 197, 24, 0.14);
+  --gold-border: rgba(245, 197, 24, 0.35);
+  --gold-glow: rgba(245, 197, 24, 0.45);
+  --gold-text: #f5c518;
+
+  /* Secondary Accents */
+  --accent-cyan: #06b6d4;
+  --accent-cyan-light: rgba(6, 182, 212, 0.14);
+  --accent-emerald: #10b981;
+  --accent-emerald-light: rgba(16, 185, 129, 0.15);
+  --accent-indigo: #6366f1;
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #848da0;
+  --text-light: #525a6c;
+  --text-inverse: #0d0d12;
+
+  /* Typography Families */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Nav & Layout */
+  --nav-height: 74px;
+  --nav-bg: rgba(13, 13, 18, 0.88);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --container-max: 1320px;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 44px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 6px 20px rgba(245, 197, 24, 0.28);
+  --shadow-gold-lg: 0 10px 30px rgba(245, 197, 24, 0.4);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-pill: 100px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme Overrides */
+[data-theme="light"] {
+  --bg-primary: #f9f9fb;
+  --bg-secondary: #ffffff;
+  --bg-surface: #ffffff;
+  --surface-card: #ffffff;
+  --surface-hover: #f1f3f7;
+  --surface-border: rgba(0, 0, 0, 0.08);
+  --surface-border-strong: rgba(0, 0, 0, 0.16);
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-input: #ffffff;
+
+  /* Gold / Amber in Light Mode */
+  --gold: #d97706;
+  --gold-hover: #b45309;
+  --gold-dark: #92400e;
+  --gold-light: rgba(217, 119, 6, 0.12);
+  --gold-border: rgba(217, 119, 6, 0.35);
+  --gold-glow: rgba(217, 119, 6, 0.3);
+  --gold-text: #b45309;
+
+  /* Typography Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-inverse: #ffffff;
+
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-border: rgba(0, 0, 0, 0.08);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+}

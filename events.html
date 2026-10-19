@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Workshops — MLRC</title>
+  <meta name="description" content="Discover guest lectures, hands-on PyTorch workshops, hackathons, and reading groups hosted by the Machine Learning Research Club (MLRC)." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+</head>
+<body data-page="events">
+
+  <div class="left-rail">EST · 2026 — MACHINE LEARNING RESEARCH CLUB · UNIVERSITY CHAPTER</div>
+  <div class="left-rail-socials">
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="GitHub">GH</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="LinkedIn">IN</a>
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="left-rail-social-btn" aria-label="Discord">DC</a>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo-left">
+        <div class="brand-icon-box">ML</div>
+        <div class="brand-divider"></div>
+        <div class="brand-title-wrap">
+          <span class="brand-main-title">MLRC</span>
+          <span class="brand-sub-tag">Research Chapter</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="tubelight-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+          <li class="nav-item"><a href="members.html" class="nav-link">Members</a></li>
+          <li class="nav-item"><a href="join.html" class="nav-link">Join Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls-right">
+        <button class="theme-toggle-btn" aria-label="Toggle Theme">☀️</button>
+        <a href="join.html" class="btn btn-gold btn-sm">Apply Now</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="research.html" class="nav-link">Research & Papers</a></li>
+      <li><a href="projects.html" class="nav-link">Projects & Systems</a></li>
+      <li><a href="events.html" class="nav-link active">Events & Calendar</a></li>
+      <li><a href="members.html" class="nav-link">People & Alumni</a></li>
+      <li><a href="join.html" class="nav-link">Recruitment & Join</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Events Hero Banner (IEEE CS Signature Bebas Neue & What's Happening) -->
+    <section class="events-header">
+      <div class="container">
+        <div class="section-kicker">
+          <span class="kicker-dot"></span>
+          <span>WHAT'S HAPPENING</span>
+        </div>
+        
+        <h1 class="events-main-title">Workshops & <span class="gold-italic">Events.</span></h1>
+        <p class="events-sub">
+          Workshops, hackathons, seminars, and reading groups — find your next opportunity to learn, build, and grow.
+        </p>
+
+        <!-- Search & Filter Bar (IEEE CS Style) -->
+        <div class="events-filter-bar">
+          <div class="events-search-wrap">
+            <span class="events-search-icon">🔍</span>
+            <input 
+              type="text" 
+              class="events-search-input" 
+              id="events-search-input" 
+              placeholder="Search events by title, speaker, or topic..." 
+              autocomplete="off"
+            />
+          </div>
+          <div class="events-filter-pills" id="events-filter-pills">
+            <button class="event-filter-pill active" data-type="all">All</button>
+            <button class="event-filter-pill" data-type="Workshop">Workshop</button>
+            <button class="event-filter-pill" data-type="Seminar">Seminar</button>
+            <button class="event-filter-pill" data-type="Hackathon">Hackathon</button>
+            <button class="event-filter-pill" data-type="Reading Group">Reading Group</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Keynote Spotlight Card -->
+    <section class="section" style="padding-top: 0; padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="featured-keynote-card card-gold-glow">
+          <div class="featured-keynote-header">
+            <div class="section-kicker" style="margin-bottom: 0;">
+              <span class="kicker-dot"></span>
+              <span>KEYNOTE SPOTLIGHT</span>
+            </div>
+            <span class="featured-keynote-date">October 24, 2026 • 6:00 PM EST</span>
+          </div>
+
+          <h2 class="featured-keynote-title">
+            Scaling Laws, Reasoning Chains & Frontier Models: From Theory to Practice
+          </h2>
+          <p class="featured-keynote-desc">
+            Featuring <strong>Dr. Sarah Lin</strong> (Senior Research Scientist, Google DeepMind). Exploring test-time compute scaling, tree-search reasoning in multimodal models, and recent architectural findings.
+          </p>
+
+          <div class="featured-countdown-wrap">
+            <div class="countdown-label-tag">COUNTDOWN TO KEYNOTE:</div>
+            <div class="countdown-timer" id="event-countdown">
+              <div class="countdown-unit">
+                <div class="countdown-num" id="cd-days">--</div>
+                <div class="countdown-lbl">Days</div>
+              </div>
+              <div class="countdown-unit">
+                <div class="countdown-num" id="cd-hours">--</div>
+                <div class="countdown-lbl">Hours</div>
+              </div>
+              <div class="countdown-unit">
+                <div class="countdown-num" id="cd-minutes">--</div>
+                <div class="countdown-lbl">Minutes</div>
+              </div>
+              <div class="countdown-unit">
+                <div class="countdown-num" id="cd-seconds">--</div>
+                <div class="countdown-lbl">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="featured-keynote-actions">
+            <a href="https://forms.gle/mlrc-seminar-frontier" target="_blank" rel="noopener noreferrer" class="btn btn-gold" id="featured-rsvp-btn">RSVP Free Pass →</a>
+            <button class="btn btn-secondary" id="featured-event-ics">Add to Calendar (.ICS)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Grid -->
+    <section class="section" id="upcoming-events-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <div class="section-kicker">
+            <span class="kicker-dot"></span>
+            <span>SCHEDULE</span>
+          </div>
+          <h2 class="serif-title" style="font-size: 2.3rem;">Upcoming events</h2>
+        </div>
+
+        <div class="events-grid" id="upcoming-events-grid">
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem;">Loading upcoming events...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events Archive Grid (IEEE CS Signature) -->
+    <section class="section" id="past-events-section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <div class="section-kicker">
+            <span class="kicker-dot"></span>
+            <span>ARCHIVE</span>
+          </div>
+          <h2 class="serif-title" style="font-size: 2.3rem;">Past events</h2>
+        </div>
+
+        <div class="events-grid" id="past-events-grid">
+          <div style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 2rem;">Loading archived events...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-mark">
+        <span class="footer-mark-text">MACHINE LEARNING RESEARCH CLUB</span>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Machine Learning Research Club (MLRC). All rights reserved.</div>
+        <div>Chapter #STB-MLRC-2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "proj-1",
+    "name": "NeuroFlow",
+    "tagline": "Real-time edge visual inference engine with adaptive sub-quadratic attention.",
+    "description": "A high-performance deployment engine designed to run multimodal transformer architectures on consumer edge hardware with low memory footprint.",
+    "category": "Computer Vision",
+    "status": "Active",
+    "featured": true,
+    "bannerGradient": "linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)",
+    "bannerLabel": "EDGE ACCELERATION",
+    "tags": ["Triton", "PyTorch", "ONNX", "Edge AI"],
+    "metrics": "4.2x FPS on Jetson Orin",
+    "github": "https://github.com/mlrc/neuroflow",
+    "demo": "https://neuroflow.mlrc-lab.org",
+    "paperId": "paper-1",
+    "contributors": ["Alex Chen", "Kenji Sato", "Marcus Brody"],
+    "details": {
+      "motivation": "Deploying 7B+ vision-language models on robotic platforms requires sub-30ms latency under strict 15W power constraints.",
+      "architecture": "Utilizes custom Triton kernels for grouped-query attention fused with FP8 quantization and dynamic layer skipping.",
+      "results": "Sustains 48 FPS on Nvidia Jetson Orin Nano with 0.8% drop in zero-shot mAP."
+    }
+  },
+  {
+    "id": "proj-2",
+    "name": "BioFold-Sim",
+    "tagline": "Equivariant graph diffusion pipeline for rapid antibody-antigen binding docking.",
+    "description": "Open-source computational biology toolkit predicting nanobody binding affinities and de novo CDR loop structures in minutes.",
+    "category": "BioAI & Science",
+    "status": "Active",
+    "featured": true,
+    "bannerGradient": "linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%)",
+    "bannerLabel": "STRUCTURAL BIOAI",
+    "tags": ["SE(3)-Equivariance", "Graph Neural Nets", "Bioinformatics"],
+    "metrics": "94.2% DockQ Success",
+    "github": "https://github.com/mlrc/biofold-sim",
+    "demo": "https://biofold.mlrc-lab.org",
+    "paperId": "paper-2",
+    "contributors": ["Priya Sharma", "Liam O'Connor"],
+    "details": {
+      "motivation": "Traditional molecular dynamics takes days per candidate. BioFold-Sim accelerates candidate screening to under 40 seconds.",
+      "architecture": "SE(3)-equivariant geometric graph matching coupled with score-based generative diffusion on continuous torsion manifolds.",
+      "results": "Benchmarked on SABDab; achieves 94.2% successful docked poses within 2.0 Å RMSD."
+    }
+  },
+  {
+    "id": "proj-3",
+    "name": "AlignGuard",
+    "tagline": "Auditing and red-teaming framework for LLM safety, sycophancy, and prompt jailbreaks.",
+    "description": "An automated red-teaming tool suite used to evaluate language model robustness against multi-step social engineering and deceptive alignment.",
+    "category": "AI Safety",
+    "status": "Active",
+    "featured": true,
+    "bannerGradient": "linear-gradient(135deg, #311042 0%, #581c87 50%, #7e22ce 100%)",
+    "bannerLabel": "SAFETY & RED-TEAMING",
+    "tags": ["Red Teaming", "Safety", "Evaluation", "LLMs"],
+    "metrics": "850+ Test Cases",
+    "github": "https://github.com/mlrc/align-guard",
+    "demo": "https://alignguard.mlrc-lab.org",
+    "paperId": "paper-3",
+    "contributors": ["Sofia Ramirez", "Alex Chen"],
+    "details": {
+      "motivation": "Standard safety benchmarks test one-turn interactions; models readily break down in multi-turn dialectic pressure.",
+      "architecture": "Adversarial agent orchestrator using tree-search over semantic perturbations and steering vector probes.",
+      "results": "Uncovered latent vulnerabilities in 6 open-source reasoning models now patched upstream."
+    }
+  },
+  {
+    "id": "proj-4",
+    "name": "TorchForge",
+    "tagline": "Student research framework for distributed training and experiment tracking.",
+    "description": "A lightweight distributed training framework built on top of PyTorch FSDP and Ray, pre-configured for university HPC cluster environments.",
+    "category": "Open Source & Tooling",
+    "status": "Completed",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #451a03 0%, #b45309 50%, #d97706 100%)",
+    "bannerLabel": "CLUSTER INFRA",
+    "tags": ["Distributed Training", "FSDP", "Ray", "Slurm"],
+    "metrics": "Used by 12 Research Labs",
+    "github": "https://github.com/mlrc/torchforge",
+    "demo": "https://torchforge.docs.mlrc-lab.org",
+    "paperId": "",
+    "contributors": ["Rohan Patel", "Marcus Brody"],
+    "details": {
+      "motivation": "University students struggle with complex Slurm cluster configurations and multi-node NCCL synchronization.",
+      "architecture": "Zero-boilerplate configuration wrapper with integrated wandb checkpointing, auto-fault tolerance, and CPU offloading.",
+      "results": "Adopted by 12 campus research groups with over 15,000 cluster runs logged."
+    }
+  },
+  {
+    "id": "proj-5",
+    "name": "RetroVision",
+    "tagline": "Zero-shot historical document transcription with multimodal contrastive models.",
+    "description": "Deep learning system for parsing damaged, degraded, and multilingual ancient manuscripts from university archives.",
+    "category": "Computer Vision",
+    "status": "Completed",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4f46e5 100%)",
+    "bannerLabel": "MULTIMODAL OCR",
+    "tags": ["OCR", "Transformers", "Digital Humanities"],
+    "metrics": "98.1% Character Accuracy",
+    "github": "https://github.com/mlrc/retro-vision",
+    "demo": "https://retrovision.mlrc-lab.org",
+    "paperId": "paper-4",
+    "contributors": ["Kenji Sato", "Priya Sharma"],
+    "details": {
+      "motivation": "Digitizing rare 17th-century Latin and Ottoman texts with degraded ink bleed and non-standard calligraphy.",
+      "architecture": "Swin-Transformer visual encoder coupled with language model beam-search decoding and synthetic deterioration augmentations.",
+      "results": "Parsed 4,000+ archive pages for the university library with 98.1% character accuracy."
+    }
+  },
+  {
+    "id": "proj-6",
+    "name": "RL-GridSim",
+    "tagline": "Multi-agent reinforcement learning for smart grid load balancing under renewable uncertainty.",
+    "description": "Simulation environment and benchmark algorithms for decentralized energy grid distribution with stochastic solar/wind influx.",
+    "category": "Reinforcement Learning",
+    "status": "Active",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #134e4a 0%, #0f766e 50%, #14b8a6 100%)",
+    "bannerLabel": "MULTI-AGENT RL",
+    "tags": ["MARL", "Gymnasium", "Optimization", "Clean Energy"],
+    "metrics": "22% Peak Load Reduction",
+    "github": "https://github.com/mlrc/rl-gridsim",
+    "demo": "https://gridsim.mlrc-lab.org",
+    "paperId": "paper-5",
+    "contributors": ["Rohan Patel", "Liam O'Connor"],
+    "details": {
+      "motivation": "Simulating high-frequency power spikes in urban micro-grids incorporating fluctuating solar and EV charger loads.",
+      "architecture": "Decentralized PPO agents with communication graphs sharing local voltage gradients across node substations.",
+      "results": "Demonstrated a 22% reduction in peak-hour generator strain across synthetic grid topologies."
+    }
+  },
+  {
+    "id": "proj-7",
+    "name": "Triton-Attention-Zoo",
+    "tagline": "Collection of drop-in sub-quadratic attention kernels written in OpenAI Triton.",
+    "description": "Production kernels for FlashAttention-3, Chunked Cross-Entropy, Block-Sparse Attention, and Linear Attention with unified PyTorch bindings.",
+    "category": "Open Source & Tooling",
+    "status": "Active",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #18181b 0%, #27272a 50%, #3f3f46 100%)",
+    "bannerLabel": "CUSTOM TRITON KERNELS",
+    "tags": ["Triton", "FlashAttention", "Kernel Optimization", "CUDA"],
+    "metrics": "3.8x Speedup over PyTorch SDPA",
+    "github": "https://github.com/mlrc/triton-attention-zoo",
+    "demo": "https://github.com/mlrc/triton-attention-zoo",
+    "paperId": "",
+    "contributors": ["Alex Chen", "Rohan Patel"],
+    "details": {
+      "motivation": "Standard PyTorch SDPA lacks support for custom attention biases and causal sliding window masks on consumer Ampere/Ada GPUs.",
+      "architecture": "Heavily pipelined Triton kernels with async memory copy, shared memory double-buffering, and warp-level reductions.",
+      "results": "Delivers 3.8x speedup on 128k context sequences compared to standard eager PyTorch implementations."
+    }
+  },
+  {
+    "id": "proj-8",
+    "name": "LatentLens",
+    "tagline": "Interactive mechanistic interpretability tool for steering vector exploration.",
+    "description": "Web-based diagnostic dashboard visualizing sparse autoencoder (SAE) feature dictionaries, neuron activations, and model steerability.",
+    "category": "AI Safety",
+    "status": "Active",
+    "featured": false,
+    "bannerGradient": "linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%)",
+    "bannerLabel": "INTERPRETABILITY SUITE",
+    "tags": ["Sparse Autoencoders", "Mechanistic Interpretability", "Activation Probing"],
+    "metrics": "32k Monosemantic Features",
+    "github": "https://github.com/mlrc/latent-lens",
+    "demo": "https://latentlens.mlrc-lab.org",
+    "paperId": "",
+    "contributors": ["Sofia Ramirez", "Priya Sharma"],
+    "details": {
+      "motivation": "Understanding why models produce deceptive or hallucinated outputs by inspecting internal representations at runtime.",
+      "architecture": "TopK sparse autoencoders trained on residual stream activations with real-time vector clamping and visualization UI.",
+      "results": "Discovered and documented 140+ monosemantic safety features across open-weight 8B parameter models."
+    }
+  }
+]
