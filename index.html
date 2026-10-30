@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -280,6 +280,20 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
       flex-shrink: 0;
       overflow: hidden;
+    }
+    /* Fix: ensure logo is centered and fully visible in collapsed sidebar */
+    #mlrc-sidebar:not(.sb-hover):not(.sb-pinned) .sb-top {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #mlrc-sidebar:not(.sb-hover):not(.sb-pinned) .sb-logo-link {
+      flex: 0 0 auto;
+      gap: 0;
+      overflow: visible;
+    }
+    #mlrc-sidebar:not(.sb-hover):not(.sb-pinned) .sb-logo-img-wrap {
+      margin: 0 auto;
     }
     [data-theme="light"] .sb-top {
       border-bottom-color: rgba(0,0,0,0.07);
@@ -667,6 +681,338 @@
     #mlrc-sidebar { z-index: 9000; }
     #sb-hamburger { z-index: 9100; }
     #sb-backdrop  { z-index: 8900; }
+
+    /* ================================================================
+       MLRC WORKSHOP - Research Writing Workshop Feature Panel
+       Scoped with mlrc-workshop- prefix. Does NOT affect other sections.
+    ================================================================ */
+
+    /* Hide the dynamically-populated legacy event card */
+    #home-upcoming-event { display: none !important; }
+
+    /* Two-column panel wrapper — 55/45 split */
+    .mlrc-workshop-panel {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: 2rem;
+      align-items: start;
+      background: rgba(14, 14, 22, 0.72);
+      border: 1px solid rgba(245, 197, 24, 0.18);
+      border-radius: var(--radius-xl, 22px);
+      padding: 1.75rem 2rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255,255,255,0.04);
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* LEFT column */
+    .mlrc-workshop-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .mlrc-workshop-eyebrow {
+      font-family: var(--font-mono, monospace);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold, #f5c518);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .mlrc-workshop-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold, #f5c518);
+      flex-shrink: 0;
+    }
+
+    .mlrc-workshop-heading {
+      font-family: var(--font-serif, Georgia, serif);
+      font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+      font-weight: 700;
+      color: var(--text-primary, #f8fafc);
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .mlrc-workshop-subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--gold, #f5c518);
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .mlrc-workshop-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary, #cbd5e1);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .mlrc-workshop-outcomes-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-muted, #848da0);
+      margin-bottom: 0.3rem;
+    }
+    .mlrc-workshop-outcomes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.28rem;
+    }
+    .mlrc-workshop-outcomes li {
+      font-size: 0.84rem;
+      color: var(--text-secondary, #cbd5e1);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      line-height: 1.45;
+    }
+    .mlrc-workshop-outcomes li::before {
+      content: '\2192';
+      color: var(--gold, #f5c518);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 0.05em;
+    }
+
+    .mlrc-workshop-speakers {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding-top: 0.7rem;
+    }
+    .mlrc-workshop-speakers-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted, #848da0);
+    }
+    .mlrc-workshop-speaker-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .mlrc-workshop-speaker {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md, 10px);
+      padding: 0.45rem 0.7rem;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+    .mlrc-workshop-speaker-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(245, 197, 24, 0.15);
+      border: 1px solid rgba(245, 197, 24, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--gold, #f5c518);
+      flex-shrink: 0;
+      font-family: var(--font-mono, monospace);
+    }
+    .mlrc-workshop-speaker-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-primary, #f8fafc);
+      line-height: 1.2;
+    }
+    .mlrc-workshop-speaker-role {
+      font-size: 0.7rem;
+      color: var(--text-muted, #848da0);
+      line-height: 1.3;
+    }
+
+    .mlrc-workshop-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.15rem;
+    }
+    .mlrc-workshop-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      background: var(--gold, #f5c518);
+      color: #0d0d12;
+      border: none;
+      border-radius: var(--radius-md, 10px);
+      font-size: 0.84rem;
+      font-weight: 700;
+      font-family: var(--font-body, sans-serif);
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .mlrc-workshop-btn-primary:hover {
+      background: var(--gold-hover, #e0b00e);
+      box-shadow: 0 4px 16px rgba(245, 197, 24, 0.35);
+      transform: translateY(-1px);
+    }
+    .mlrc-workshop-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      background: transparent;
+      color: var(--text-secondary, #cbd5e1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-md, 10px);
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: var(--font-body, sans-serif);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .mlrc-workshop-btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.38);
+      color: var(--text-primary, #f8fafc);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-1px);
+    }
+
+    /* RIGHT column — poster */
+    .mlrc-workshop-poster-col {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .mlrc-workshop-poster-frame {
+      width: 100%;
+      border: 1px solid rgba(245, 197, 24, 0.2);
+      border-radius: var(--radius-lg, 16px);
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.04);
+      background: rgba(10, 10, 16, 0.6);
+    }
+    .mlrc-workshop-poster-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: var(--radius-lg, 16px);
+    }
+
+    /* ── Light-theme overrides ──────────────────────────────── */
+    [data-theme="light"] .mlrc-workshop-panel {
+      background: #ffffff;
+      border-color: rgba(80, 70, 120, 0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04);
+    }
+    [data-theme="light"] .mlrc-workshop-eyebrow {
+      color: var(--gold, #d97706);
+    }
+    [data-theme="light"] .mlrc-workshop-eyebrow::before {
+      background: var(--gold, #d97706);
+    }
+    [data-theme="light"] .mlrc-workshop-heading {
+      color: #0f172a;
+    }
+    [data-theme="light"] .mlrc-workshop-subtitle {
+      color: var(--gold, #d97706);
+    }
+    [data-theme="light"] .mlrc-workshop-desc {
+      color: #334155;
+    }
+    [data-theme="light"] .mlrc-workshop-outcomes-label {
+      color: #64748b;
+    }
+    [data-theme="light"] .mlrc-workshop-outcomes li {
+      color: #334155;
+    }
+    [data-theme="light"] .mlrc-workshop-outcomes li::before {
+      color: var(--gold, #d97706);
+    }
+    [data-theme="light"] .mlrc-workshop-speakers {
+      border-top-color: rgba(0,0,0,0.1);
+    }
+    [data-theme="light"] .mlrc-workshop-speakers-label {
+      color: #64748b;
+    }
+    [data-theme="light"] .mlrc-workshop-speaker {
+      background: #f1f3f7;
+      border-color: rgba(0,0,0,0.1);
+    }
+    [data-theme="light"] .mlrc-workshop-speaker-name {
+      color: #0f172a;
+    }
+    [data-theme="light"] .mlrc-workshop-speaker-role {
+      color: #64748b;
+    }
+    [data-theme="light"] .mlrc-workshop-speaker-avatar {
+      background: rgba(217,119,6,0.12);
+      border-color: rgba(217,119,6,0.3);
+      color: var(--gold, #d97706);
+    }
+    [data-theme="light"] .mlrc-workshop-btn-secondary {
+      color: #334155;
+      border-color: rgba(0,0,0,0.2);
+    }
+    [data-theme="light"] .mlrc-workshop-btn-secondary:hover {
+      border-color: rgba(0,0,0,0.4);
+      color: #0f172a;
+      background: rgba(0,0,0,0.04);
+    }
+    [data-theme="light"] .mlrc-workshop-poster-frame {
+      border-color: rgba(217,119,6,0.25);
+      background: #f8f9fb;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .mlrc-workshop-panel {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+      .mlrc-workshop-poster-col { order: 2; }
+      .mlrc-workshop-info { order: 1; }
+    }
+    @media (max-width: 576px) {
+      .mlrc-workshop-panel {
+        padding: 1.25rem 1rem;
+        gap: 1.25rem;
+      }
+      .mlrc-workshop-heading { font-size: 1.3rem; }
+      .mlrc-workshop-actions { flex-direction: column; }
+      .mlrc-workshop-btn-primary,
+      .mlrc-workshop-btn-secondary {
+        justify-content: center;
+        width: 100%;
+      }
+      .mlrc-workshop-speaker-list { flex-direction: column; }
+    }
   </style>
 </head>
 <body data-page="home" class="sb-page">
@@ -881,15 +1227,15 @@
               <div class="shape-waves-header">
                 <div class="shape-waves-status">
                   <span class="shape-waves-dot"></span>
-                  <span class="shape-waves-title">TENSOR FIELD · GEOMETRIC MANIFOLD</span>
+                  <span class="shape-waves-title"> Past mlrc-workshop- </span>
                 </div>
-                <span class="shape-waves-badge">dim: [16, 16] · 60fps</span>
+                <span class="shape-waves-badge"> </span>
               </div>
               <div class="shape-waves-canvas-box">
                 <canvas id="shape-waves-canvas" aria-label="Geometric Shape Waves field animation showing undulating circles, squares, and triangles"></canvas>
               </div>
               <div class="shape-waves-footer">
-                <span class="shape-waves-caption">Mathematical structures &amp; neural patterns</span>
+                <span class="shape-waves-caption">  </span>
                 <span class="shape-waves-tag">MLRC 2026</span>
               </div>
             </div>
@@ -1060,8 +1406,8 @@
       </div>
     </section>
 
-    <!-- Featured Projects Grid -->
-    <section class="section" style="background: var(--surface-hover); padding-top: 4rem; padding-bottom: 4rem;">
+    <!-- Featured Club Projects (Commented Out)
+<section class="section" style="background: var(--surface-hover); padding-top: 4rem; padding-bottom: 4rem;">
       <div class="container">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem;">
           <div>
@@ -1076,8 +1422,9 @@
         <div class="grid-3" id="home-featured-projects"></div>
       </div>
     </section>
+    -->
 
-    <!-- Upcoming Event Preview -->
+    <!-- Upcoming Event Preview — Research Writing Workshop Feature Panel -->
     <section class="section">
       <div class="container">
         <div class="section-header" style="margin-bottom: 2rem;">
@@ -1087,7 +1434,96 @@
           </div>
           <h2 class="section-title">Upcoming Event &amp; Workshop</h2>
         </div>
-        <div id="home-upcoming-event" style="max-width: 840px; margin: 0 auto;"></div>
+
+        <!--
+          #home-upcoming-event is kept in the DOM so main.js can write to it
+          without errors, but it is hidden via CSS (#home-upcoming-event { display: none }).
+          The new static workshop panel below is shown instead.
+        -->
+        <div id="home-upcoming-event" aria-hidden="true"></div>
+
+        <!-- New: Research Writing Workshop two-column panel -->
+        <div class="mlrc-workshop-panel" role="region" aria-label="Research Writing Workshop">
+
+          <!-- LEFT — Workshop information -->
+          <div class="mlrc-workshop-info">
+            <div class="mlrc-workshop-eyebrow">Research Workshop &middot; MLRC</div>
+
+            <h3 class="mlrc-workshop-heading">Beyond Ideas: The Science of Research Writing</h3>
+
+            <p class="mlrc-workshop-subtitle">A Hands-on Workshop</p>
+
+            <p class="mlrc-workshop-desc">
+              Turn your research ideas into structured, well-written academic papers. Join this
+              hands-on workshop to understand the research writing process, from identifying a
+              research gap to preparing a paper for publication.
+            </p>
+
+            <div>
+              <div class="mlrc-workshop-outcomes-label">Key Learning Outcomes</div>
+              <ul class="mlrc-workshop-outcomes">
+                <li>Structuring a research paper</li>
+                <li>Literature review and identifying research gaps</li>
+                <li>Research methodology and presenting results</li>
+                <li>Citations, referencing and the publication process</li>
+              </ul>
+            </div>
+
+            <div class="mlrc-workshop-speakers">
+              <div class="mlrc-workshop-speakers-label">Workshop Speakers</div>
+              <div class="mlrc-workshop-speaker-list">
+                <div class="mlrc-workshop-speaker">
+                  <div class="mlrc-workshop-speaker-avatar">BR</div>
+                  <div>
+                    <div class="mlrc-workshop-speaker-name">Dr. Bhagat Raghuvanshi</div>
+                    <div class="mlrc-workshop-speaker-role">Assistant Professor &mdash; Centre for AI</div>
+                  </div>
+                </div>
+                <div class="mlrc-workshop-speaker">
+                  <div class="mlrc-workshop-speaker-avatar">AT</div>
+                  <div>
+                    <div class="mlrc-workshop-speaker-name">Dr. Ashish Tomar</div>
+                    <div class="mlrc-workshop-speaker-role">Assistant Professor &mdash; Computer Science &amp; Design</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mlrc-workshop-actions">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfQepfQlSoKZn1jiEI84SbjB2I8HdYtYqzYL_kHRE7oUe57Qg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mlrc-workshop-btn-primary"
+                aria-label="Register for the Research Writing Workshop"
+              >
+                ✦ Register Now
+              </a>
+              <a
+                href="https://www.linkedin.com/posts/mitsdugwalior_mlrc-mitsgwalior-researchwriting-activity-7521641494064181250-Kg8-"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mlrc-workshop-btn-secondary"
+                aria-label="View LinkedIn announcement for the Research Writing Workshop"
+              >
+                in&nbsp; View LinkedIn Announcement
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT — Original workshop poster -->
+          <div class="mlrc-workshop-poster-col">
+            <div class="mlrc-workshop-poster-frame">
+              <img
+                src="/Research Writing Workshop Backdrop.png"
+                alt="Research Writing Workshop poster — Beyond Ideas: The Science of Research Writing, a hands-on workshop by MLRC featuring Dr. Bhagat Raghuvanshi and Dr. Ashish Tomar"
+                class="mlrc-workshop-poster-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div><!-- /.mlrc-workshop-panel -->
       </div>
     </section>
 
