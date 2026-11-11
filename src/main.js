@@ -114,41 +114,8 @@ function initHomePage() {
     bindProjectModalTriggers(featuredProjectsContainer);
   }
 
-  // Hydrate Next Upcoming Event
-  const homeEventContainer = document.getElementById('home-upcoming-event');
-  if (homeEventContainer) {
-    const nextEvent = eventsData.find(e => e.status === 'upcoming');
-    if (nextEvent) {
-      homeEventContainer.innerHTML = `
-        <div class="glass-card" style="border-color: rgba(99, 102, 241, 0.4);">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <span class="badge badge-cyan">${nextEvent.type}</span>
-            <span class="badge badge-emerald">● Upcoming Event</span>
-          </div>
-          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">${nextEvent.title}</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;">
-            📅 ${nextEvent.displayDate} &nbsp;|&nbsp; ⏰ ${nextEvent.time} &nbsp;|&nbsp; 📍 ${nextEvent.location}
-          </p>
-          <div class="event-speaker-info" style="margin-bottom: 1.5rem;">
-            <div class="speaker-avatar-circle">${nextEvent.speaker.name.charAt(0)}</div>
-            <div>
-              <div style="font-weight: 600; color: #fff;">${nextEvent.speaker.name}</div>
-              <div style="font-size: 0.8rem; color: var(--text-muted);">${nextEvent.speaker.affiliation}</div>
-            </div>
-          </div>
-          <div style="display: flex; gap: 0.75rem;">
-            <a href="${nextEvent.rsvpUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">RSVP Free</a>
-            <button class="btn btn-secondary btn-sm ics-download-btn" data-id="${nextEvent.id}">Add to Calendar</button>
-            <a href="events.html" class="btn btn-ghost btn-sm" style="margin-left: auto;">All Events →</a>
-          </div>
-        </div>
-      `;
-
-      homeEventContainer.querySelector('.ics-download-btn')?.addEventListener('click', () => {
-        downloadIcsFile(nextEvent);
-      });
-    }
-  }
+  // Initialize Upcoming Event & Workshop Timeline & Modal Controller
+  initUpcomingTimeline();
 }
 
 /* ==========================================================================
@@ -812,4 +779,174 @@ function bindProjectModalTriggers(container) {
 
 function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+
+/* ==========================================================================
+   Upcoming Events & Workshops Timeline Controller
+   Handles scroll glow line progress, glowing dots, and accessible detail modal
+   ========================================================================== */
+function initUpcomingTimeline() {
+  const timelineSection = document.querySelector('.upcoming-timeline-section');
+  if (!timelineSection) return;
+
+  const timelineTrack = timelineSection.querySelector('.timeline-progress-track');
+  const progressLine = timelineSection.querySelector('.timeline-progress-fill');
+  const items = timelineSection.querySelectorAll('.timeline-item');
+  const cards = timelineSection.querySelectorAll('.timeline-card');
+  const modal = document.getElementById('upcoming-event-modal');
+  const modalBody = document.getElementById('upcoming-modal-body');
+  const closeButtons = modal ? modal.querySelectorAll('[data-close-modal]') : [];
+
+  let lastFocusedCard = null;
+
+  // Scroll Glow Tracker: center line fills with gold from top, dots glow, card borders brighten
+  const updateScrollGlow = () => {
+    if (!timelineTrack || !progressLine) return;
+    const trackRect = timelineTrack.getBoundingClientRect();
+    const triggerY = window.innerHeight * 0.65;
+
+    // Calculate height of filled gold line
+    let fillHeight = 0;
+    if (trackRect.top < triggerY) {
+      fillHeight = Math.min(triggerY - trackRect.top, trackRect.height);
+    }
+    progressLine.style.height = `${Math.max(0, fillHeight)}px`;
+
+    // Check each dot and card
+    items.forEach((item) => {
+      const dot = item.querySelector('.timeline-dot');
+      if (!dot) return;
+      const dotRect = dot.getBoundingClientRect();
+      const dotCenterY = dotRect.top + dotRect.height / 2;
+
+      if (dotCenterY <= triggerY) {
+        item.classList.add('is-lit');
+      } else {
+        item.classList.remove('is-lit');
+      }
+    });
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateScrollGlow();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  updateScrollGlow();
+
+  // Accessible Modal Controller (Trap focus, Lock scroll, Esc/Outside close, Return focus)
+  if (modal && modalBody) {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusables = Array.from(
+          modal.querySelectorAll(
+            'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          )
+        );
+        if (focusables.length === 0) {
+          e.preventDefault();
+          return;
+        }
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    };
+
+    const openModal = (card) => {
+      const detailSource = card.querySelector('.timeline-card-detail-payload');
+      if (!detailSource) return;
+
+      lastFocusedCard = card;
+      modalBody.innerHTML = detailSource.innerHTML;
+
+      // Handle register button and linkedin button dynamically based on data attributes
+      const regUrl = card.dataset.registerUrl;
+      const linkedinUrl = card.dataset.linkedinUrl;
+      const actionsWrap = modalBody.querySelector('.modal-actions-wrap');
+
+      if (actionsWrap) {
+        let buttonsHtml = '';
+        if (regUrl) {
+          buttonsHtml += `<a href="${regUrl}" target="_blank" rel="noopener noreferrer" class="btn-modal-primary">✦ Register Now</a>`;
+        } else {
+          buttonsHtml += `<button class="btn-modal-primary" disabled aria-disabled="true"><span>Registration opens soon</span></button>`;
+        }
+
+        if (linkedinUrl) {
+          buttonsHtml += `<a href="${linkedinUrl}" target="_blank" rel="noopener noreferrer" class="btn-modal-secondary">in &nbsp;View LinkedIn Announcement</a>`;
+        }
+        actionsWrap.innerHTML = buttonsHtml;
+      }
+
+      modal.hidden = false;
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+
+      document.addEventListener('keydown', handleKeyDown);
+
+      // Focus close button
+      const closeBtn = modal.querySelector('.upcoming-modal-close');
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.hidden = true;
+      modalBody.innerHTML = '';
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
+
+      if (lastFocusedCard) {
+        lastFocusedCard.focus();
+        lastFocusedCard = null;
+      }
+    };
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => openModal(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal(card);
+        }
+      });
+    });
+
+    closeButtons.forEach((btn) => {
+      btn.addEventListener('click', closeModal);
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target.hasAttribute('data-close-modal')) {
+        closeModal();
+      }
+    });
+  }
 }

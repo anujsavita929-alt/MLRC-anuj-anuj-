@@ -1424,10 +1424,11 @@
     </section>
     -->
 
-    <!-- Upcoming Event Preview — Research Writing Workshop Feature Panel -->
-    <section class="section">
+    <!-- Upcoming Event & Workshop Redesigned Timeline Section -->
+    <section class="section upcoming-timeline-section" id="upcoming-events-section" aria-label="Upcoming Events and Workshops">
       <div class="container">
-        <div class="section-header" style="margin-bottom: 2rem;">
+        <!-- Section Header (Centered NEXT GATHERING pill and Serif Title) -->
+        <div class="upcoming-section-header">
           <div class="section-kicker">
             <span class="kicker-dot"></span>
             <span>NEXT GATHERING</span>
@@ -1435,95 +1436,360 @@
           <h2 class="section-title">Upcoming Event &amp; Workshop</h2>
         </div>
 
-        <!--
-          #home-upcoming-event is kept in the DOM so main.js can write to it
-          without errors, but it is hidden via CSS (#home-upcoming-event { display: none }).
-          The new static workshop panel below is shown instead.
-        -->
-        <div id="home-upcoming-event" aria-hidden="true"></div>
+        <!-- Vertical Timeline Container -->
+        <div class="upcoming-timeline" role="feed" aria-label="Upcoming events timeline">
+          <!-- Central Progress Line Track -->
+          <div class="timeline-progress-track" aria-hidden="true">
+            <div class="timeline-progress-fill"></div>
+          </div>
 
-        <!-- New: Research Writing Workshop two-column panel -->
-        <div class="mlrc-workshop-panel" role="region" aria-label="Research Writing Workshop">
-
-          <!-- LEFT — Workshop information -->
-          <div class="mlrc-workshop-info">
-            <div class="mlrc-workshop-eyebrow">Research Workshop &middot; MLRC</div>
-
-            <h3 class="mlrc-workshop-heading">Beyond Ideas: The Science of Research Writing</h3>
-
-            <p class="mlrc-workshop-subtitle">A Hands-on Workshop</p>
-
-            <p class="mlrc-workshop-desc">
-              Turn your research ideas into structured, well-written academic papers. Join this
-              hands-on workshop to understand the research writing process, from identifying a
-              research gap to preparing a paper for publication.
-            </p>
-
-            <div>
-              <div class="mlrc-workshop-outcomes-label">Key Learning Outcomes</div>
-              <ul class="mlrc-workshop-outcomes">
-                <li>Structuring a research paper</li>
-                <li>Literature review and identifying research gaps</li>
-                <li>Research methodology and presenting results</li>
-                <li>Citations, referencing and the publication process</li>
-              </ul>
+          <!-- Event 1: Latent Diffusion (Text Left / Image Right) -->
+          <article class="timeline-item" data-event-index="1">
+            <div class="timeline-dot" aria-hidden="true">
+              <span class="timeline-dot-inner"></span>
             </div>
-
-            <div class="mlrc-workshop-speakers">
-              <div class="mlrc-workshop-speakers-label">Workshop Speakers</div>
-              <div class="mlrc-workshop-speaker-list">
-                <div class="mlrc-workshop-speaker">
-                  <div class="mlrc-workshop-speaker-avatar">BR</div>
-                  <div>
-                    <div class="mlrc-workshop-speaker-name">Dr. Bhagat Raghuvanshi</div>
-                    <div class="mlrc-workshop-speaker-role">Assistant Professor &mdash; Centre for AI</div>
+            <div class="timeline-card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Foundations of Latent Diffusion &amp; Generative Modeling" data-register-url="" data-linkedin-url="">
+              <div class="timeline-card-grid">
+                <!-- Text Left -->
+                <div class="timeline-card-content">
+                  <div class="timeline-tag">
+                    <span class="tag-bullet">&bull;</span>
+                    <span>WORKSHOP &bull; MLRC</span>
+                  </div>
+                  <h3 class="timeline-title">Foundations of Latent Diffusion &amp; Generative Modeling</h3>
+                  <p class="timeline-subtitle">A HANDS-ON WORKSHOP</p>
+                  <p class="timeline-desc">
+                    Explore mathematical intuitions behind denoising score matching, latent diffusion pipelines, and conditioned cross-attention mechanisms powering modern vision-language models.
+                  </p>
+                  <div class="timeline-card-hint">
+                    <span>View Event Details</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </div>
                 </div>
-                <div class="mlrc-workshop-speaker">
-                  <div class="mlrc-workshop-speaker-avatar">AT</div>
-                  <div>
-                    <div class="mlrc-workshop-speaker-name">Dr. Ashish Tomar</div>
-                    <div class="mlrc-workshop-speaker-role">Assistant Professor &mdash; Computer Science &amp; Design</div>
+
+                <!-- Poster Right (Pure CSS Generative Art) -->
+                <div class="timeline-poster-wrap">
+                  <div class="timeline-poster timeline-poster-1" aria-hidden="true">
+                    <div class="poster-decor-header">
+                      <div class="poster-badge">
+                        <span class="poster-pulse-dot"></span>
+                        <span>MLRC LAB // 01</span>
+                      </div>
+                      <span class="poster-tag-right">WORKSHOP</span>
+                    </div>
+                    <div class="poster-art-center">
+                      <div class="poster-rings">
+                        <div class="poster-ring ring-1"></div>
+                        <div class="poster-ring ring-2"></div>
+                        <div class="poster-ring ring-3"></div>
+                        <div class="poster-core-glow"></div>
+                      </div>
+                      <div class="poster-art-title">LATENT DIFFUSION</div>
+                      <div class="poster-art-subtitle">Score Matching &bull; Guided Sampling</div>
+                    </div>
+                    <div class="poster-decor-footer">
+                      <span class="poster-symbol">&nabla;&middot;p<sub>&theta;</sub>(x<sub>t</sub>)</span>
+                      <span class="poster-meta">VENUE &bull; TBA</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="mlrc-workshop-actions">
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfQepfQlSoKZn1jiEI84SbjB2I8HdYtYqzYL_kHRE7oUe57Qg/viewform?usp=header"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mlrc-workshop-btn-primary"
-                aria-label="Register for the Research Writing Workshop"
-              >
-                ✦ Register Now
-              </a>
-              <a
-                href="https://www.linkedin.com/posts/mitsdugwalior_mlrc-mitsgwalior-researchwriting-activity-7521641494064181250-Kg8-"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mlrc-workshop-btn-secondary"
-                aria-label="View LinkedIn announcement for the Research Writing Workshop"
-              >
-                in&nbsp; View LinkedIn Announcement
-              </a>
+              <!-- Hidden Detail Payload for Modal -->
+              <div class="timeline-card-detail-payload" hidden>
+                <div class="modal-event-tag">&bull; WORKSHOP &bull; MLRC</div>
+                <h3 class="modal-event-title" id="modal-active-title">Foundations of Latent Diffusion &amp; Generative Modeling</h3>
+                <p class="modal-event-subtitle">A HANDS-ON WORKSHOP</p>
+                <p class="modal-event-desc">
+                  Explore mathematical intuitions behind denoising score matching, latent diffusion pipelines, and conditioned cross-attention mechanisms powering modern vision-language models. Join fellow student researchers and faculty mentors for this foundational technical gathering.
+                </p>
+
+                <!-- Metadata Row -->
+                <div class="modal-meta-grid">
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📅 Date</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">⏰ Time</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📍 Venue</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                </div>
+
+                <!-- Key Outcomes -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Key Learning Outcomes</h4>
+                  <ul class="modal-outcomes-list">
+                    <li>Derivation of diffusion probabilistic objectives and variance schedules</li>
+                    <li>Latent space autoencoding and perceptual compression efficiency</li>
+                    <li>Implementing classifier-free guidance (CFG) from scratch</li>
+                    <li>Cross-attention conditioning mechanisms and prompt embeddings</li>
+                  </ul>
+                </div>
+
+                <!-- Speakers -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Featured Speakers</h4>
+                  <div class="modal-speaker-card">
+                    <div class="modal-speaker-avatar">TBA</div>
+                    <div class="modal-speaker-info">
+                      <div class="modal-speaker-name">To be announced</div>
+                      <div class="modal-speaker-role">Invited Research Fellow &bull; Generative Vision Group</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal Actions -->
+                <div class="modal-actions-wrap">
+                  <button class="btn-modal-primary" disabled aria-disabled="true">
+                    <span>Registration opens soon</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 2: Autonomous Reasoning (Image Left / Text Right) -->
+          <article class="timeline-item" data-event-index="2">
+            <div class="timeline-dot" aria-hidden="true">
+              <span class="timeline-dot-inner"></span>
+            </div>
+            <div class="timeline-card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Autonomous Reasoning &amp; Test-Time Compute Scaling" data-register-url="" data-linkedin-url="">
+              <div class="timeline-card-grid">
+                <!-- Poster Left (Alternated) -->
+                <div class="timeline-poster-wrap">
+                  <div class="timeline-poster timeline-poster-2" aria-hidden="true">
+                    <div class="poster-decor-header">
+                      <div class="poster-badge">
+                        <span class="poster-pulse-dot"></span>
+                        <span>MLRC LAB // 02</span>
+                      </div>
+                      <span class="poster-tag-right">SEMINAR</span>
+                    </div>
+                    <div class="poster-art-center">
+                      <div class="poster-tree-graph">
+                        <div class="tree-node node-root"></div>
+                        <div class="tree-branch branch-left"></div>
+                        <div class="tree-branch branch-right"></div>
+                        <div class="tree-node node-child-1"></div>
+                        <div class="tree-node node-child-2"></div>
+                        <div class="tree-node node-child-3"></div>
+                      </div>
+                      <div class="poster-art-title">TEST-TIME COMPUTE</div>
+                      <div class="poster-art-subtitle">Search &bull; Verification &bull; RL</div>
+                    </div>
+                    <div class="poster-decor-footer">
+                      <span class="poster-symbol">MCTS // &Sigma; R(s,a)</span>
+                      <span class="poster-meta">VENUE &bull; TBA</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text Right (Alternated) -->
+                <div class="timeline-card-content">
+                  <div class="timeline-tag">
+                    <span class="tag-bullet">&bull;</span>
+                    <span>SEMINAR &bull; MLRC</span>
+                  </div>
+                  <h3 class="timeline-title">Autonomous Reasoning &amp; Test-Time Compute Scaling</h3>
+                  <p class="timeline-subtitle">THEORY &amp; EXPERIMENTS</p>
+                  <p class="timeline-desc">
+                    A rigorous investigation into inference-time compute allocation, Monte Carlo tree search across thought graphs, and self-correcting verifier architectures.
+                  </p>
+                  <div class="timeline-card-hint">
+                    <span>View Event Details</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden Detail Payload for Modal -->
+              <div class="timeline-card-detail-payload" hidden>
+                <div class="modal-event-tag">&bull; SEMINAR &bull; MLRC</div>
+                <h3 class="modal-event-title">Autonomous Reasoning &amp; Test-Time Compute Scaling</h3>
+                <p class="modal-event-subtitle">THEORY &amp; EXPERIMENTS</p>
+                <p class="modal-event-desc">
+                  A rigorous investigation into inference-time compute allocation, Monte Carlo tree search across thought graphs, and self-correcting verifier architectures. Unpack theoretical scaling limits of sequential thought generation.
+                </p>
+
+                <!-- Metadata Row -->
+                <div class="modal-meta-grid">
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📅 Date</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">⏰ Time</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📍 Venue</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                </div>
+
+                <!-- Key Outcomes -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Key Learning Outcomes</h4>
+                  <ul class="modal-outcomes-list">
+                    <li>Process-supervised reward models (PRMs) vs outcome verification</li>
+                    <li>Scaling inference-time compute with parallel sampling and tree search</li>
+                    <li>Failure modes in speculative decoding and iterative refinement</li>
+                    <li>Benchmarking theorem proving and complex multi-step reasoning</li>
+                  </ul>
+                </div>
+
+                <!-- Speakers -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Featured Speakers</h4>
+                  <div class="modal-speaker-card">
+                    <div class="modal-speaker-avatar">TBA</div>
+                    <div class="modal-speaker-info">
+                      <div class="modal-speaker-name">To be announced</div>
+                      <div class="modal-speaker-role">AI Safety &amp; Reasoning Working Group Lead</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal Actions -->
+                <div class="modal-actions-wrap">
+                  <button class="btn-modal-primary" disabled aria-disabled="true">
+                    <span>Registration opens soon</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 3: Distributed Training (Text Left / Image Right) -->
+          <article class="timeline-item" data-event-index="3">
+            <div class="timeline-dot" aria-hidden="true">
+              <span class="timeline-dot-inner"></span>
+            </div>
+            <div class="timeline-card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="View details for Distributed Training &amp; Model Parallelism on GPU Clusters" data-register-url="" data-linkedin-url="">
+              <div class="timeline-card-grid">
+                <!-- Text Left -->
+                <div class="timeline-card-content">
+                  <div class="timeline-tag">
+                    <span class="tag-bullet">&bull;</span>
+                    <span>HANDS-ON LAB &bull; MLRC</span>
+                  </div>
+                  <h3 class="timeline-title">Distributed Training &amp; Model Parallelism on GPU Clusters</h3>
+                  <p class="timeline-subtitle">SYSTEMS LAB</p>
+                  <p class="timeline-desc">
+                    Hands-on laboratory analyzing tensor, pipeline, and sequence parallelism strategies for training multi-billion parameter networks across high-speed clusters.
+                  </p>
+                  <div class="timeline-card-hint">
+                    <span>View Event Details</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
+                </div>
+
+                <!-- Poster Right (Pure CSS Generative Art) -->
+                <div class="timeline-poster-wrap">
+                  <div class="timeline-poster timeline-poster-3" aria-hidden="true">
+                    <div class="poster-decor-header">
+                      <div class="poster-badge">
+                        <span class="poster-pulse-dot"></span>
+                        <span>MLRC LAB // 03</span>
+                      </div>
+                      <span class="poster-tag-right">SYSTEMS</span>
+                    </div>
+                    <div class="poster-art-center">
+                      <div class="poster-gpu-matrix">
+                        <div class="matrix-cell cell-1"></div>
+                        <div class="matrix-cell cell-2"></div>
+                        <div class="matrix-cell cell-3"></div>
+                        <div class="matrix-cell cell-4"></div>
+                        <div class="matrix-wire wire-h"></div>
+                        <div class="matrix-wire wire-v"></div>
+                        <div class="matrix-glow-core"></div>
+                      </div>
+                      <div class="poster-art-title">DISTRIBUTED GPU</div>
+                      <div class="poster-art-subtitle">ZeRO-3 &bull; Pipeline &bull; NVLink</div>
+                    </div>
+                    <div class="poster-decor-footer">
+                      <span class="poster-symbol">3D-PARALLEL</span>
+                      <span class="poster-meta">VENUE &bull; TBA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden Detail Payload for Modal -->
+              <div class="timeline-card-detail-payload" hidden>
+                <div class="modal-event-tag">&bull; HANDS-ON LAB &bull; MLRC</div>
+                <h3 class="modal-event-title">Distributed Training &amp; Model Parallelism on GPU Clusters</h3>
+                <p class="modal-event-subtitle">SYSTEMS LAB</p>
+                <p class="modal-event-desc">
+                  Hands-on laboratory analyzing tensor, pipeline, and sequence parallelism strategies for training multi-billion parameter networks across high-speed clusters. Deep dive into inter-GPU interconnect topologies and bandwidth saturation.
+                </p>
+
+                <!-- Metadata Row -->
+                <div class="modal-meta-grid">
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📅 Date</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">⏰ Time</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                  <div class="modal-meta-item">
+                    <span class="modal-meta-label">📍 Venue</span>
+                    <span class="modal-meta-value">To be announced</span>
+                  </div>
+                </div>
+
+                <!-- Key Outcomes -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Key Learning Outcomes</h4>
+                  <ul class="modal-outcomes-list">
+                    <li>DeepSpeed ZeRO-1/2/3 memory partitioning architectures</li>
+                    <li>3D parallelism tradeoffs across NVLink and InfiniBand fabrics</li>
+                    <li>Handling network stragglers, fault recovery, and gradient checkpointing</li>
+                    <li>Profiling kernel execution bottlenecks with PyTorch Profiler</li>
+                  </ul>
+                </div>
+
+                <!-- Speakers -->
+                <div class="modal-section-block">
+                  <h4 class="modal-section-heading">Featured Speakers</h4>
+                  <div class="modal-speaker-card">
+                    <div class="modal-speaker-avatar">TBA</div>
+                    <div class="modal-speaker-info">
+                      <div class="modal-speaker-name">To be announced</div>
+                      <div class="modal-speaker-role">MLRC Systems Infrastructure Lead &bull; High Performance Computing</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal Actions -->
+                <div class="modal-actions-wrap">
+                  <button class="btn-modal-primary" disabled aria-disabled="true">
+                    <span>Registration opens soon</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div><!-- /.upcoming-timeline -->
+
+        <!-- Accessible Detail Card Modal Dialog -->
+        <div id="upcoming-event-modal" class="upcoming-modal" role="dialog" aria-modal="true" aria-labelledby="modal-active-title" hidden>
+          <div class="upcoming-modal-backdrop" data-close-modal></div>
+          <div class="upcoming-modal-dialog">
+            <button class="upcoming-modal-close" data-close-modal aria-label="Close event details">&times;</button>
+            <div class="upcoming-modal-body" id="upcoming-modal-body">
+              <!-- Dynamically populated on card click -->
             </div>
           </div>
+        </div>
 
-          <!-- RIGHT — Original workshop poster -->
-          <div class="mlrc-workshop-poster-col">
-            <div class="mlrc-workshop-poster-frame">
-              <img
-                src="/Research Writing Workshop Backdrop.png"
-                alt="Research Writing Workshop poster — Beyond Ideas: The Science of Research Writing, a hands-on workshop by MLRC featuring Dr. Bhagat Raghuvanshi and Dr. Ashish Tomar"
-                class="mlrc-workshop-poster-img"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-        </div><!-- /.mlrc-workshop-panel -->
       </div>
     </section>
 
